@@ -1,0 +1,79 @@
+body {
+    background-image: url("../images/world.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 20px;
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #434d54;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
+    margin: auto;
+    perspective: 1000px;
+}
+
+.card {
+    background-color: #f2e8df;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    border-radius: 5%;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+p {
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.front {
+    background-color: #f2e8df;
+    color: #fe8514;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-color: #fe8514;
+    color: #f2e8df;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+#card1:hover,
+#card2:hover,
+#card3:hover,
+#card4:hover,
+#card5:hover,
+#card6:hover,
+#card7:hover,
+#card8:hover,
+#card9:hover {
+    transform: rotateY(180deg);
+}
